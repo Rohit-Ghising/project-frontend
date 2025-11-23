@@ -1,6 +1,10 @@
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import Button from "@mui/material/Button";
+
+import { useNavigate } from "react-router-dom";
+
 export default function ProductCard() {
+  const navigate = useNavigate();
   return (
     <div className="mx-24 bg-white py-8 px-12">
       <div className="flex text-2xl space-x-3  ">
@@ -22,6 +26,7 @@ export default function ProductCard() {
               <img
                 src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXBob25lfGVufDB8fDB8fHww"
                 alt=""
+                onClick={() => navigate(`/productdetails/${2}`)}
               />
               <div className="text-xl flex ">
                 <div className=" flex flex-col justify-center items-center space-y-2">
