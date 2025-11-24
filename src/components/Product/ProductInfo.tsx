@@ -1,7 +1,9 @@
 import Button from "@mui/material/Button";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductInfo() {
+  const navigate = useNavigate();
   const images = [
     "https://media.istockphoto.com/id/2173563100/photo/iphone-16-pro-smartphone.jpg?s=612x612&w=0&k=20&c=SXECFz1NMEdbYK9XzJYsn7JIPAivJUXRwG7dwxN_QM8=",
     "https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600&auto=format&fit=crop&q=60",
@@ -108,6 +110,7 @@ export default function ProductInfo() {
               Add to Wish List
             </Button>
             <Button
+              onClick={() => navigate(`/cart/${5}`)}
               variant="outlined"
               sx={{
                 backgroundColor: "white",
