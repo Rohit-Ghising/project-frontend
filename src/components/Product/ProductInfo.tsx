@@ -110,7 +110,7 @@ export default function ProductInfo() {
               Add to Wish List
             </Button>
             <Button
-              onClick={() => navigate(`/cart/${5}`)}
+              onClick={() => navigate(`/cart/`)}
               variant="outlined"
               sx={{
                 backgroundColor: "white",

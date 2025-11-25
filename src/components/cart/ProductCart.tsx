@@ -5,8 +5,10 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function ProductCart() {
+  const navigate = useNavigate();
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
@@ -130,6 +132,7 @@ export default function ProductCart() {
 
                 <div className="flex items-center justify-center">
                   <Button
+                    onClick={() => navigate(`/checkout/${6}`)}
                     variant="contained"
                     sx={{
                       width: 500,
