@@ -3,7 +3,9 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export default function NavigationBar() {
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const handleSearch = () => {
     setSearch(e.target.value);
@@ -28,7 +30,7 @@ export default function NavigationBar() {
           <a href="">Blog</a>
           <FavoriteBorderIcon />
           <ShoppingCartIcon />
-          <PersonOutlineIcon />
+          <PersonOutlineIcon onClick={() => navigate(`/profile/${4}`)} />
         </div>
       </div>
     </div>
