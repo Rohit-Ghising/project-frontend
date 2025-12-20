@@ -4,6 +4,7 @@ import ProductDetailsPage from "./components/Pages/ProductDetailsPage";
 import ProductCart from "./components/cart/ProductCart";
 import Checkout from "./components/cart/Checkout";
 import Profile from "./components/Pages/Profile";
+import Admin from "./components/Admin/Admin";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/cart/" element={<ProductCart />} />
         <Route path="/checkout/:orderId" element={<Checkout />} />
         <Route path="/profile/:id" element={<Profile />} />
+        <Route path="/admin/*" element={<Admin />} />
       </Routes>
     </div>
   );
