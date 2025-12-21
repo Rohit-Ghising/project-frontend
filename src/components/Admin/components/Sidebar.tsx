@@ -26,10 +26,10 @@ const Sidebar: React.FC = () => {
           <ListItemIcon>
             <ShoppingCartIcon />
           </ListItemIcon>
-          <ListItemText primary="Products" />
+          <ListItemText primary="Add Products" />
         </ListItem>
 
-        <ListItem button component={Link} to="/orders">
+        <ListItem button component={Link} to="/admin/orders">
           <ListItemIcon>
             <ListAltIcon />
           </ListItemIcon>
