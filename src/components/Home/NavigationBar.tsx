@@ -5,7 +5,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  AppBar,
   Box,
   Button,
   InputAdornment,
