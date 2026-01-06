@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Products from "./pages/Products";
 import Orders from "./pages/Orders";
+import AdminCustomers from "./components/AdminCustomers";
 
 const Admin: React.FC = () => {
   return (
@@ -16,6 +17,7 @@ const Admin: React.FC = () => {
         <Route path="/" element={<Dashboard />} />
         <Route path="products" element={<Products />} />
         <Route path="orders" element={<Orders />} />
+        <Route path="customers" element={<AdminCustomers />} />
       </Routes>
     </Box>
   );
