@@ -18,6 +18,7 @@ export default function DisplayProduct() {
           flexDirection: "column",
           gap: "24px",
           justifyContent: "center",
+          alignItems: "start",
         }}
       >
         <Typography
