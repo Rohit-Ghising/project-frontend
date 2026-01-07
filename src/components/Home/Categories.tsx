@@ -1,46 +1,177 @@
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import { Box, Stack, Typography } from "@mui/material";
 function Categories() {
   return (
-    <div className="mx-24 bg-gray-200 py-12 px-12">
-      <div className="flex items-center">
-        <p className="text-3xl">Browse By Categories</p>
-        <div className="flex justify-center items-end ml-auto">
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "32px",
+        px: "160px",
+        py: "80px",
+        bgcolor: "white",
+      }}
+    >
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <Typography sx={{ fontSize: "30px" }}> Browse By Categories</Typography>
+
+        <Stack direction={"row"} spacing={1}>
           <ArrowBackIosIcon />
           <ArrowForwardIosIcon />
-        </div>
-      </div>
-
-      {/* categories */}
-
-      <div className="grid grid-cols-6 gap-6  ">
-        <div className="bg-gray-300 py-12 px-20 items-center justify-center  mt-4 rounded-lg ">
-          <PhoneIphoneIcon sx={{ fontSize: 50 }} />
-          <p className="text-2xl">Phones</p>
-        </div>
-        <div className="bg-gray-300 py-12 px-20 items-center justify-center  mt-4 rounded-lg ">
-          <PhoneIphoneIcon sx={{ fontSize: 50 }} />
-          <p className="text-2xl">Phones</p>
-        </div>
-        <div className="bg-gray-300 py-12 px-20 items-center justify-center  mt-4 rounded-lg ">
-          <PhoneIphoneIcon sx={{ fontSize: 50 }} />
-          <p className="text-2xl">Phones</p>
-        </div>
-        <div className="bg-gray-300 py-12 px-20 items-center justify-center  mt-4 rounded-lg ">
-          <PhoneIphoneIcon sx={{ fontSize: 50 }} />
-          <p className="text-2xl">Phones</p>
-        </div>
-        <div className="bg-gray-300 py-12 px-20 items-center justify-center  mt-4 rounded-lg ">
-          <PhoneIphoneIcon sx={{ fontSize: 50 }} />
-          <p className="text-2xl">Phones</p>
-        </div>
-        <div className="bg-gray-300 py-12 px-20 items-center justify-center  mt-4 rounded-lg ">
-          <PhoneIphoneIcon sx={{ fontSize: 50 }} />
-          <p className="text-2xl">Phones</p>
-        </div>
-      </div>
-    </div>
+        </Stack>
+      </Box>
+      {/* CAto */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          gap: "32px",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <Box
+          sx={{
+            height: "128px",
+            width: "160px",
+            px: "52px",
+            py: "24px",
+            borderRadius: "15px",
+            bgcolor: "#EDEDED",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              alignItems: "center",
+            }}
+          >
+            <PhoneIphoneIcon sx={{ height: "48px", width: "48px" }} />
+            <Typography>Phone</Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            height: "128px",
+            width: "160px",
+            px: "52px",
+            py: "24px",
+            borderRadius: "15px",
+            bgcolor: "#EDEDED",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              alignItems: "center",
+            }}
+          >
+            <PhoneIphoneIcon sx={{ height: "48px", width: "48px" }} />
+            <Typography>Phone</Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            height: "128px",
+            width: "160px",
+            px: "52px",
+            py: "24px",
+            borderRadius: "15px",
+            bgcolor: "#EDEDED",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              alignItems: "center",
+            }}
+          >
+            <PhoneIphoneIcon sx={{ height: "48px", width: "48px" }} />
+            <Typography>Phone</Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            height: "128px",
+            width: "160px",
+            px: "52px",
+            py: "24px",
+            borderRadius: "15px",
+            bgcolor: "#EDEDED",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              alignItems: "center",
+            }}
+          >
+            <PhoneIphoneIcon sx={{ height: "48px", width: "48px" }} />
+            <Typography>Phone</Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            height: "128px",
+            width: "160px",
+            px: "52px",
+            py: "24px",
+            borderRadius: "15px",
+            bgcolor: "#EDEDED",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              alignItems: "center",
+            }}
+          >
+            <PhoneIphoneIcon sx={{ height: "48px", width: "48px" }} />
+            <Typography>Phone</Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            height: "128px",
+            width: "160px",
+            px: "52px",
+            py: "24px",
+            borderRadius: "15px",
+            bgcolor: "#EDEDED",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "8px",
+              alignItems: "center",
+            }}
+          >
+            <PhoneIphoneIcon sx={{ height: "48px", width: "48px" }} />
+            <Typography>Phone</Typography>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
