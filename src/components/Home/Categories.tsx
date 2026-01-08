@@ -35,7 +35,7 @@ function Categories() {
           display: "flex",
           flexDirection: "row",
           gap: "32px",
-          justifyContent: "space-evenly",
+          alignItems: "center",
         }}
       >
         <Box

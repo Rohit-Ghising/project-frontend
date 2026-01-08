@@ -12,8 +12,8 @@ export default function HomePage() {
       <DisplayProduct />
       <HeroSection />
       <Categories />
-      {/* <ProductCard />
-      <Footer /> */}
+      <ProductCard />
+      {/* <Footer /> */}
     </div>
   );
 }

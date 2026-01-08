@@ -1,55 +1,84 @@
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { Box, IconButton, Stack, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
+import i14 from "../../assets/Iphone 14 pro 1.png";
 
 import { useNavigate } from "react-router-dom";
 
 export default function ProductCard() {
   const navigate = useNavigate();
   return (
-    <div className="mx-24 bg-white py-8 px-12">
-      <div className="flex text-2xl space-x-3  ">
-        <a href="" className="underline">
-          New Arrivlas
-        </a>
-        <a href="" className="text-gray-400">
-          Best Seller
-        </a>
-        <a href="" className="text-gray-400">
+    <Box
+      sx={{
+        px: "160px",
+        py: "56px",
+        gap: "32px",
+        display: "flex",
+        flexDirection: "column",
+        bgcolor: "white",
+      }}
+    >
+      <Box sx={{ gap: "32px", display: "flex", flexDirection: "row" }}>
+        <Typography sx={{ fontSize: "20px", fontWeight: 600 }}>
+          New Arrivals
+        </Typography>
+        <Typography sx={{ fontSize: "20px", fontWeight: 600 }}>
+          BestSellers
+        </Typography>
+        <Typography sx={{ fontSize: "20px", fontWeight: 600 }}>
+          {" "}
           Featured Products
-        </a>
-      </div>
-      <div className="grid grid-cols-4 gap-6">
-        {[1, 1, 1, 1, 1, 1, 1, 1].map((item) => (
-          <div className="bg-gray-400 w-[300px] h-[500px] relative rounded-lg">
-            <FavoriteBorderIcon className="absolute top-2 right-2 text-white  " />
-            <div className="pt-12 px-6">
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4, 268px)",
+          gap: "16px",
+        }}
+      >
+        {[1, 1, 1, 1, 1, 1, 1, 1].map((item, index) => (
+          <Box
+            sx={{
+              bgcolor: "#EDEDED",
+              height: "432px",
+              width: "268px",
+              borderRadius: "9px",
+              alignItems: "center",
+
+              px: "16px",
+              py: "24px",
+              position: "relative",
+            }}
+          >
+            <IconButton
+              sx={{
+                position: "absolute",
+                top: "16px",
+                right: "16px",
+              }}
+            >
+              <FavoriteBorderIcon />
+            </IconButton>
+            <Stack spacing={2} alignItems="center" sx={{ mt: 4 }}>
               <img
-                src="https://images.unsplash.com/photo-1591337676887-a217a6970a8a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aXBob25lfGVufDB8fDB8fHww"
-                alt=""
-                onClick={() => navigate(`/productdetails/${2}`)}
+                src={i14}
+                alt="product"
+                style={{ height: 160, width: 160, objectFit: "cover" }}
               />
-              <div className="text-xl flex ">
-                <div className=" flex flex-col justify-center items-center space-y-2">
-                  <p> Apple Iphone 17Pro max</p>
-                  <p>128gb deep purple</p>
-                  <p className="font-bold text-2xl ">$1000</p>
-                  <Button
-                    variant="contained"
-                    sx={{
-                      background: "black",
-                      paddingX: 4, // left-right
-                      paddingY: 1.5, // top-bottom
-                      fontSize: "18px",
-                    }}
-                  >
-                    Buy Now
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
+              <Typography sx={{ fontWeight: 600 }}>Product Name</Typography>
+              <Typography sx={{ color: "gray" }}>Description</Typography>
+              <Typography sx={{ fontWeight: 700 }}>$Price</Typography>
+              <Button
+                variant="contained"
+                sx={{ bgcolor: "black", color: "white" }}
+              >
+                Buy Now
+              </Button>
+            </Stack>
+          </Box>
         ))}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
