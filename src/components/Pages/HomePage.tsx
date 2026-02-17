@@ -1,3 +1,4 @@
+import Banners from "../Home/Banners";
 import Categories from "../Home/Categories";
 import DisplayProduct from "../Home/DisplayProduct";
 import Footer from "../Home/Footer";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <HeroSection />
       <Categories />
       <ProductCard />
+      <Banners />
       {/* <Footer /> */}
     </div>
   );
